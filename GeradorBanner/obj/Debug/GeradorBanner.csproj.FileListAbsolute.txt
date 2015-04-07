@@ -1,0 +1,4 @@
+E:\RepositorioGit\MBL-Banner\GeradorBanner\bin\GeradorBanner.dll
+E:\RepositorioGit\MBL-Banner\GeradorBanner\bin\GeradorBanner.pdb
+E:\RepositorioGit\MBL-Banner\GeradorBanner\obj\Debug\GeradorBanner.dll
+E:\RepositorioGit\MBL-Banner\GeradorBanner\obj\Debug\GeradorBanner.pdb
