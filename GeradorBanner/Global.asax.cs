@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Net.Mail;
+using System.Net;
 
 namespace GeradorBanner
 {
@@ -13,7 +15,19 @@ namespace GeradorBanner
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
-
+            MailMessage mail = new MailMessage();
+            mail.To.Add("silvanopfj@gmail.com");
+            mail.Subject = "#START#: MBL-Banner";
+            mail.Body = "Start da aplicação." + "<br><br>";
+            
+            mail.From = new MailAddress("silvanopfj@gmail.com");
+            mail.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.EnableSsl = true;
+            smtp.Credentials = CredentialCache.DefaultNetworkCredentials;
+            smtp.Port = 587;
+            smtp.Send(mail);
         }
 
         void Application_End(object sender, EventArgs e)
@@ -24,8 +38,26 @@ namespace GeradorBanner
 
         void Application_Error(object sender, EventArgs e)
         {
-            // Code that runs when an unhandled error occurs
+        //    // Code that runs when an unhandled error occurs
+        //    Exception LastError = Server.GetLastError();
+            
+            
+        //    MailMessage mail = new MailMessage();
+        //    mail.To.Add("silvanopfj@gmail.com");
+        //    mail.Subject = "#Error#: MBL-Banner";
+        //    mail.Body = "Somebody has experienced an error." + "<br><br>";
+        //    mail.Body += LastError.ToString();
 
+        //    mail.IsBodyHtml = true;
+        //    SmtpClient smtp = new SmtpClient();
+        //    smtp.Host = "smtp.gmail.com";
+        //    smtp.EnableSsl = true;
+        //    smtp.Credentials = CredentialCache.DefaultNetworkCredentials;
+        //    smtp.Port = 587;
+        //    smtp.Send(mail);
+
+
+            
         }
 
         void Session_Start(object sender, EventArgs e)

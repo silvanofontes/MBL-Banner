@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeradorBanner", "GeradorBanner\GeradorBanner.csproj", "{D73084BA-A15B-4475-B43B-55206039FC70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilvanoFontes.GeradorBanner", "GeradorBanner\SilvanoFontes.GeradorBanner.csproj", "{D73084BA-A15B-4475-B43B-55206039FC70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
